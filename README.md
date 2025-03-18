@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
+## Requisites:
+Please follow this [Angular installation guide](https://angular.dev/installation) for any issues. In short, all you need is:
+
+- Node.js - [v^18.19.1 or newer](https://angular.dev/reference/versions).
+- Terminal or Command Line - Required for running Angular CLI commands.
+
+In order to install all necessary packages used by the projetc, run `npm install`.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
