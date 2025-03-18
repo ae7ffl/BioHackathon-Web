@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +8,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  menuVisible: boolean = true;
 
   private onScroll = () => {
     console.log('Scroll detected'); // Mensaje de prueba
@@ -22,6 +23,22 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
     }
   };
+  @HostListener('mouseenter', ['$event.target'])
+  onMouseEnter(target: HTMLElement): void {
+    const menu = document.getElementById('menu');
+    if (menu) {
+      menu.style.height = '100px';
+      menu.style.visibility = 'visible';
+    }
+  }
+  @HostListener('mouseleave', ['$event.target'])
+  onMouseLeave(target: HTMLElement): void {
+    const menu = document.getElementById('menu');
+    if (menu) {
+      menu.style.height = '0';
+      menu.style.visibility = 'hidden';
+    }
+  }
 
   ngOnInit(): void {
     window.addEventListener('scroll', this.onScroll);
