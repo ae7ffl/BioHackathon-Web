@@ -23,20 +23,17 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
     }
   };
-  @HostListener('mouseenter', ['$event.target'])
-  onMouseEnter(target: HTMLElement): void {
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent): void {
     const menu = document.getElementById('menu');
     if (menu) {
-      menu.style.height = '100px';
-      menu.style.visibility = 'visible';
-    }
-  }
-  @HostListener('mouseleave', ['$event.target'])
-  onMouseLeave(target: HTMLElement): void {
-    const menu = document.getElementById('menu');
-    if (menu) {
-      menu.style.height = '0';
-      menu.style.visibility = 'hidden';
+      if (event.clientY <= 50) { // Si el cursor está en los primeros 50px de la pantalla
+        menu.style.height = '100px';
+        menu.style.visibility = 'visible';
+      } else {
+        menu.style.height = '0';
+        menu.style.visibility = 'hidden';
+      }
     }
   }
 
