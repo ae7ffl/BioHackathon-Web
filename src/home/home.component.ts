@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +8,10 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  menuVisible: boolean = true;
 
   private onScroll = () => {
-    console.log('Scroll detected'); // Mensaje de prueba
+    console.log('Scroll detected'); 
     const menu = document.getElementById('menu') as HTMLElement | null;
     if (menu) {
       if (window.scrollY > 100) {
@@ -22,6 +23,19 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
     }
   };
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent): void {
+    const menu = document.getElementById('menu');
+    if (menu) {
+      if (event.clientY <= 50) { 
+        menu.style.height = '100px';
+        menu.style.visibility = 'visible';
+      } else {
+        menu.style.height = '0';
+        menu.style.visibility = 'hidden';
+      }
+    }
+  }
 
   ngOnInit(): void {
     window.addEventListener('scroll', this.onScroll);
