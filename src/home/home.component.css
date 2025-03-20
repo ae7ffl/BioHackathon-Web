@@ -105,7 +105,7 @@ nav .icons-bars-line {
     width: 100%;
     height: auto;
 }
-h1, h2, h3, p{
+h1, h2, p{
     text-align: center; 
     margin: 20px 0; 
     font-family: Arial, Helvetica, sans-serif; 
@@ -113,12 +113,23 @@ h1, h2, h3, p{
 h1 {
     margin-top: 200px;
 }
-h3 {
+h2 {
     color: lightskyblue;
     margin-top: 50px;
     margin-bottom: 0px;
 }
 p {
-    margin-top: 0px;
+    margin: 0 auto;
+    margin-top: 5px;
     margin-bottom: 20px;
+    width: 80%;
+    height: auto;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    background-color: lightskyblue;
+    border: 25px solid lightskyblue;
+    border-radius: 10px;
+    text-align: center
+    font-family: Arial, Helvetica, sans-serif;
 }

@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   menuVisible: boolean = true;
 
   private onScroll = () => {
-    console.log('Scroll detected'); // Mensaje de prueba
+    console.log('Scroll detected'); 
     const menu = document.getElementById('menu') as HTMLElement | null;
     if (menu) {
       if (window.scrollY > 100) {
@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   onMouseMove(event: MouseEvent): void {
     const menu = document.getElementById('menu');
     if (menu) {
-      if (event.clientY <= 50) { // Si el cursor está en los primeros 50px de la pantalla
+      if (event.clientY <= 50) { 
         menu.style.height = '100px';
         menu.style.visibility = 'visible';
       } else {
