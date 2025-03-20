@@ -4,3 +4,7 @@
     --dark-color: #000;
     --light-color: #d3ecff;
 }
+
+body {
+    background-color: var(--light-color);
+}
