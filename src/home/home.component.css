@@ -146,15 +146,16 @@ nav {
  #welcome{
     margin-bottom: 100px;
 
-    h1 { font-size: 3.5rem; }
+    h1 { 
+        font-family: 'Oswald', sans-serif;
+        font-size: 3.5rem; }
     h2 { font-size: 2rem; }
     p { font-size: 1.7rem; }
 
     .welcome-section-header {
         h2 {
-            font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Bebas Neue', sans-serif;
             font-style: italic;
-            text-decoration: underline;
             span {
                 color: var(--dark-color);
             }
@@ -162,7 +163,7 @@ nav {
     }
 }
 
-.highlighted-section{
+#highlight{
     background-color: #fff;
     font-family: 'Oswald', sans-serif;
     font-style: italic;
@@ -230,7 +231,7 @@ nav {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
 
             &:hover {
-                transform: translateY(-5px);
+                transform: translateY(-10px);
                 box-shadow: 0 8px 16px rgba(0,0,0,0.15);
                 .team-member-description p, .team-member-title h5  {
                     color: var(--primary-color);
