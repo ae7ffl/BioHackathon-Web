@@ -257,21 +257,31 @@ nav {
                 object-fit: cover;
                 border: solid var(--light-color);
                 border-radius: 10%;
-                margin-bottom: 2%;
+                margin-bottom: 10%;
             }
 
-            .team-member-title h4, h5 {
-                font-size: 1.5rem;
-                font-weight: 600;
-                color: #222;
-                margin-bottom: 2%;
+            .team-member-title {
+                h4{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: var(--primary-color);
+                    margin-bottom: 2%;
+                }
+
+                h5{
+                    font-size: 1rem;
+                    font-weight: 600;
+                    color: var(--primary-color);
+                    margin-bottom: 2%;
+                }
+                
             }
 
             .team-member-description p {
                 background-color: var(--light-color);
                 border: none;
                 border-radius: 20pt;
-                font-size: 1.2rem;
+                font-size: 1rem;
                 color: #555;
                 line-height: 1.4;
                 padding: 3%;
