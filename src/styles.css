@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600&display=swap');
+
 :root {   /* Type {color-attribute}: var(--primary-color) to use them in any componet's style */
-    --primary-color: #1c7d99;
-    --secondary-color: #46d9a4;
-    --dark-color: #110539;
-    --light-color: #c7f9e7;
+    --primary-color: #3d8ad0;
+    --secondary-color: #000;
+    --dark-color: #000;
+    --light-color: #d3ecff;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+body {
+    background-color: var(--light-color);
 }
