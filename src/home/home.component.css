@@ -203,6 +203,7 @@ nav {
 } 
 
 #team {
+    height: 100vh;
     padding: 60px 20px;
 
     .team-section-header {
