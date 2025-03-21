@@ -56,6 +56,9 @@ nav {
     transition: all 1s ease-in-out;
 
     .logo {
+        img {
+            max-width: 300px;
+        }
         font-size: 24px;
         font-weight: bold;
         color: var(--light-color);
