@@ -8,7 +8,10 @@ import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  
   menuVisible: boolean = true;
+
+  currentYear: number = new Date().getFullYear();
 
   private onScroll = () => {
     console.log('Scroll detected'); 
@@ -23,7 +26,15 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
     }
   };
-  @HostListener('document:mousemove', ['$event'])
+  
+  ngOnInit(): void {
+    window.addEventListener('scroll', this.onScroll);
+  }
+
+  ngOnDestroy(): void {
+    window.removeEventListener('scroll', this.onScroll);
+  }
+
   onMouseMove(event: MouseEvent): void {
     const menu = document.getElementById('menu');
     if (menu) {
@@ -37,11 +48,5 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }
 
-  ngOnInit(): void {
-    window.addEventListener('scroll', this.onScroll);
-  }
 
-  ngOnDestroy(): void {
-    window.removeEventListener('scroll', this.onScroll);
-  }
 }
