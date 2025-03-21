@@ -48,8 +48,8 @@ nav {
     z-index: 10;
     top: 0; left: 0; right: 0;
     padding: 0 5%;
-    max-height: 100px;
-    background-color: var(--primary-color);
+    max-height: 150px;
+    background-color: #f9f9f9;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,6 +61,9 @@ nav {
         color: var(--light-color);
         text-transform: uppercase;
     }
+    .logo img{
+        width: 250px;
+    }
 
     .list {
         display: flex;
@@ -70,17 +73,61 @@ nav {
 
         a {
             text-transform: uppercase;
-            color: var(--light-color);
+            color: var(--dark-color);
             font-size: 16px;
             font-weight: bold;
             padding: 15px;
             display: block;
 
-            &:hover {
-                border-bottom: 4px solid var(--dark-color);
-                transition: ease-in-out 0.2s;
-            }
         }
+    }
+
+    #welcome-id{
+        border-bottom: 4px solid #fff;
+        transition: ease-in-out 0.2s;
+    }
+    
+    #welcome-id:hover{
+        border-bottom: 4px solid var(--primary-color);
+        margin-top: -10px;
+        transition: ease-in-out 0.4s; 
+        color: var(--primary-color);
+    }
+
+    #project-id{
+        border-bottom: 4px solid #fff;
+        transition: ease-in-out 0.2s;
+    }
+    
+    #project-id:hover{
+        border-bottom: 4px solid var(--primary-color);
+        margin-top: -10px;
+        transition: ease-in-out 0.4s; 
+        color: var(--primary-color);
+    }
+
+    #team-id{
+        border-bottom: 4px solid #fff;
+        transition: ease-in-out 0.2s;
+    }
+    
+    #team-id:hover{
+        border-bottom: 4px solid var(--primary-color);
+        margin-top: -10px;
+        transition: ease-in-out 0.4s; 
+        color: var(--primary-color);
+    }
+
+    #contact-id{
+        border-bottom: 4px solid #fff;
+        transition: ease-in-out 0.2s;
+    }
+    
+    #contact-id:hover{
+        border-bottom: 4px solid var(--primary-color);
+        margin-top: -10px;
+        transition: ease-in-out 0.4s; 
+        color: var(--primary-color);
     }
 
     .icon-bars {
@@ -165,7 +212,12 @@ nav {
         url("https://assets.weforum.org/article/image/m2lGQJCKGba91rmkyTgSfAU8-KgaGZbj1k8BsM0WczE.jpg");
         background-size: cover;
         background-position: center;
+        margin-top: 70px;
     }
+}
+
+#idea-born-title{
+    margin-top: 70px;
 }
 
 #highlight{
@@ -265,13 +317,14 @@ nav {
             }
 
             .team-member-description p {
-                background-color: var(--light-color);
                 border: none;
+                background-color: #fff;
                 border-radius: 20pt;
                 font-size: 1.2rem;
                 color: #555;
                 line-height: 1.4;
                 padding: 3%;
+                
             }
         }
     }
@@ -282,6 +335,7 @@ nav {
     background: var(--primary-color);
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
+    margin-bottom: -100px;
 
 
     .contact-section-content {
