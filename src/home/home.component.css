@@ -192,8 +192,13 @@ nav {
         }
     }
     h2 {
+        color: var(--dark-color);
         font-family: 'Oswald', sans-serif;
         font-size: 2rem;
+        font-style: italic;
+        span {
+            color: var(--primary-color);
+        }
     }
 }
 
@@ -209,12 +214,7 @@ nav {
 
     .welcome-section-header {
         h2 {
-            color: var(--dark-color);
             font-family: 'Oswald', sans-serif;
-            font-style: italic;
-            span {
-                color: var(--primary-color);
-            }
         }
     }
     .welcome-section-content {
@@ -267,7 +267,8 @@ nav {
                 img {
                     height: 3em; 
                     vertical-align: baseline;
-                    transform: translateY(0.8em); 
+                    transform: translateY(0.85em);
+                    margin-right: -2.5rem; 
                 }
         
             }
