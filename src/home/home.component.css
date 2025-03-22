@@ -59,10 +59,6 @@ nav {
         img {
             max-width: 300px;
         }
-        font-size: 24px;
-        font-weight: bold;
-        color: var(--light-color);
-        text-transform: uppercase;
     }
     .logo img{
         width: 250px;
@@ -186,6 +182,14 @@ nav {
     h1 {
         font-family: 'Bebas Neue', sans-serif;
         font-size: 8rem;
+        display: inline-flex;
+        align-items: flex-end;
+
+        img {
+            height: 2em; 
+            vertical-align: baseline;
+            transform: translateY(0.25em); 
+        }
     }
     h2 {
         font-family: 'Oswald', sans-serif;
@@ -194,19 +198,22 @@ nav {
 }
 
  #welcome{
-
-    h1 { 
-        font-family: 'Oswald', sans-serif;
-        font-size: 3.5rem; }
+    text-align: center;
+    img {
+        margin-top: 2rem;
+        margin-bottom: -3rem;
+        vertical-align: baseline;
+    }
     h2 { font-size: 2rem; }
     p { font-size: 1.7rem; }
 
     .welcome-section-header {
         h2 {
-            font-family: 'Bebas Neue', sans-serif;
+            color: var(--dark-color);
+            font-family: 'Oswald', sans-serif;
             font-style: italic;
             span {
-                color: var(--dark-color);
+                color: var(--primary-color);
             }
         }
     }
@@ -256,6 +263,13 @@ nav {
                 margin-right: 2rem;
                 text-align: right;
                 padding-bottom: 1rem;
+                align-items: flex-end;
+                img {
+                    height: 3em; 
+                    vertical-align: baseline;
+                    transform: translateY(0.8em); 
+                }
+        
             }
         }
     
@@ -344,8 +358,9 @@ nav {
 }
 
 #contact {
-    display: flex;
     background: var(--primary-color);
+    display: flex;
+    height: 100vh;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     margin-bottom: -100px;
@@ -446,18 +461,24 @@ nav {
 }
 
 #footer {
-    margin-top: 0;
     background-color: var(--primary-color);
-    color: var(--light-color);
+    color: #fff;
     font-size: 1.2rem;
-    width: 100vw;
     margin-left: calc(-50vw + 50%);
     padding: 1.5rem 2rem;
-    text-align: center;
-    transform: translateY(80px);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
     .footer-section-copyright {
-      max-width: 1200px;
-      margin: 0 auto;
+        text-align: left;
+        font-family: var(--font-alt);
     }
-  }
-  
+    .footer-section-logo {
+        img {
+            height: 1.5em;
+            transform: translateY(0.3em);
+        }
+    }
+}
