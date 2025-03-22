@@ -48,12 +48,12 @@ nav {
     z-index: 10;
     top: 0; left: 0; right: 0;
     padding: 0 5%;
-    max-height: 150px;
+    max-height: 100px;
     background-color: #f9f9f9;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
 
     .logo {
         img {
@@ -179,6 +179,17 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
+    transition: all 1s ease-in-out;
+    .hide-discover-btn:checked {
+        #discover {
+            visibility: hidden;
+            height: 0;
+        }
+    }
+    h1,h2 {
+        transform: translateY(-7rem);
+    }
+
     h1 {
         font-family: 'Bebas Neue', sans-serif;
         font-size: 8rem;
@@ -203,6 +214,7 @@ nav {
 }
 
  #welcome{
+    margin-top: 255px;
     text-align: center;
     img {
         margin-top: 2rem;
