@@ -2,30 +2,30 @@
 <body>
     <nav id="menu">
         <div class="logo">
-            <img src="../assets/logo/logo_no-bg.png" alt="">
+            <a href="#"><img src="../assets/logo/no-bg/logo-2.png" alt=""></a>
         </div>
-        <input type="checkbox" id="toggle">
+        <!-- <input type="checkbox" id="toggle"> -->
         <label for="toggle" class="icon-bars">
             <div class="icons-bars-line"></div>
             <div class="icons-bars-line"></div>
             <div class="icons-bars-line"></div>
         </label>
         <ul class="list">
-            <li><a href="#welcome">Home</a></li>
-            <li><a href="#">Project</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a id="welcome-id" href="#" (click)="makeDiscoverSectionVisible()">Home</a></li>
+            <li><a id="project-id" href="#welcome">Project</a></li>
+            <li><a id="team-id" href="#team">Team</a></li>
+            <li><a id="contact-id" href="#contact">Contact Us</a></li>
         </ul>
     </nav>
     
-    <div id="discover" class="discover-section">
-        <h1>DISCOVER SYNBIO CATALYST</h1>
-        <h2>Helping researchers achieve greatness.</h2>
+    <div id="discover" class="discover-section" [hidden]="isDiscoverVisible()">
+        <h1>DISCOVER <img src="../assets/logo/no-bg/logo1.png" alt=""></h1>
+        <h2><span>C</span>omputational <span>A</span>nalysis <span>T</span>ools for <span>L</span>ife <span>S</span>ystems & <span>T</span>echnologies</h2>
     </div>
     <div id="welcome" class="welcome-section">
         <div class="welcome-section-header">
-            <h1>Welcome to Synbio CATaLyST</h1>
-            <h2><span>C</span>omputational <span>A</span>nalysis <span>T</span>ools for <span>L</span>ife <span>S</span>ystems & <span>T</span>echnologies</h2>
+            <img src="../assets/logo/no-bg/logo5.png" alt="">
+            <h2>Helping researchers achieve greatness.</h2>
         </div>
         <div class="welcome-section-content">
             <h2>What is all this about?</h2>
@@ -33,10 +33,11 @@
     
             <p>At Synbio CATaLyST, we understand the importance of having the right tools, adapting their needs to those of researchers, and providing the necessary support so that these researchers have the best available technologies, saving time and maximizing their results.</p>
     
+            <div id="idea-born-title">
             <h2>How this idea started?</h2>
             <p>Synbio CATaLyST was born as a promising idea by students at the Faculty of Sciences and the Higher Technical School of Computer Engineering at the University of Málaga. This was in response to the students' observations regarding the limited availability of quality software tools, the poor quality of certain graphical interfaces, and the researchers' need for easy-to-use software to analyze data quickly and consistently. </p>
             <p>Synbio CATaLyST seeks to become a benchmark for technological solutions for all companies and research groups seeking to increase their performance in the biosciences field. </p>
-    
+            </div>
         </div>
     </div>
 
@@ -49,12 +50,12 @@
             </div>
             <div class="highlighted-section-subtext">
                 <h2>
-                    Enabling research teams and companies alike to achieve improved performance through tailored synthetic biology tools.
+                    Enabling teams and companies alike to achieve improved performance through tailored synthetic biology tools.
                 </h2>
             </div>
             <div class="higlighted-section-foot-text">
                 <h3>
-                    Synbio CATaLyST – The catalyst your next biosciences breakthrough needs.
+                    <img src="../assets/logo/no-bg/logo5.png" alt=""> – The catalyst your next biosciences breakthrough needs.
                 </h3>
             </div>
         </div>
@@ -62,7 +63,7 @@
 
     <div id="team" class="team-section">
         <div class="team-section-header">
-            <h3>Team</h3>
+            <h3>Meet the team</h3>
             <div class="team-section-members">
                 <div class="team-member">
                     <div class="team-member-photo">
@@ -127,7 +128,7 @@
         <div class="contact-section-content">
             <div class="contact-section-header">
                 <h1>Contact Us</h1>
-                <h2>Have you got any enquiries or want to know more about how our work can benefit you? Feel free to contact us.</h2>
+                <h2>Have you got any inquiries or want to know more about how our work can benefit you? Feel free to contact us.</h2>
             </div>
             <div class="contact-form">
                 <div class="contact-form-subject">
@@ -158,6 +159,9 @@
     <footer id="footer" class="footer-section">
         <div class="footer-section-copyright">
             &copy; {{ currentYear }} Synbio CATaLyST. All rights reserved.
+        </div>
+        <div class="footer-section-logo">
+            <img src="../assets/logo/no-bg/logo4.png" alt="">
         </div>
     </footer>
 </body>
