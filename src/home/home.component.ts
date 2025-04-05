@@ -10,20 +10,21 @@ import { Component, OnInit, OnDestroy, HostListener, signal, WritableSignal } fr
 export class HomeComponent implements OnInit, OnDestroy {
 
   isDiscoverVisible: WritableSignal<boolean> = signal(true);
+  /* */
+  private animationFinished = false
+  /* */
   currentYear: number = new Date().getFullYear();
 
   private onScroll = () => {
     console.log('Scroll detected'); 
     const menu = document.getElementById('menu') as HTMLElement | null;
     if (menu) {
+      this.updateNavbarVisibility(undefined, window.scrollY); // Usar la nueva función
       if (window.scrollY > 100) {
-        menu.style.height = '100px';
-        menu.style.visibility = 'visible';
+        // visibilidad controlada por UpdateNavbar
       } else {
         this.isDiscoverVisible.set(false);
         console.log('isDiscoverVisible', this.isDiscoverVisible()); 
-        menu.style.height = '0';
-        menu.style.visibility = 'hidden';
       }
     }
   };
@@ -40,6 +41,13 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    // Simular el fin de la animación después de 1 segundo
+    setTimeout(() => {
+    this.animationFinished = true;
+    console.log('Animation finished');
+    this.updateNavbarVisibility(); // Evaluar la visibilidad de la Navbar después de la animación
+    }, 1000); // Ajusta este tiempo según la duración de tu animación (1s en el CSS)  
+
     window.addEventListener('scroll', this.onScroll);
     window.addEventListener('scroll', this.toggleDiscoverSection);
   }
@@ -53,15 +61,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   onMouseMove(event: MouseEvent): void {
     const menu = document.getElementById('menu');
     console.log("event.clientY", event.clientY);
-    if (menu) {
-      if (event.clientY <= 50) {
-        menu.style.height = '100px';
-        menu.style.visibility = 'visible';
-      } else {
-        menu.style.height = '0';
-        menu.style.visibility = 'hidden';
-      }
-    }
+    this.updateNavbarVisibility(event.clientY); // Usar la nueva función
   }
 
   @HostListener('window:scroll')
@@ -74,4 +74,31 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
     }
   }
+
+  // Combinar ratón y scroll
+  private updateNavbarVisibility(clientY?: number, scrollY: number = window.scrollY): void {
+    const menu = document.getElementById('menu') as HTMLElement | null;
+    if (!menu) return;
+
+    // No mostrar la Navbar si la animación no ha terminado
+    if (!this.animationFinished) {
+      menu.style.height = '0';
+      menu.style.visibility = 'hidden';
+      return;
+    }
+
+    // Mostrar la Navbar si:
+    // 1. El ratón está en los primeros 100 píxeles, o
+    // 2. El scroll es mayor a 100 píxeles
+    const isMouseAtTop = clientY !== undefined && clientY <= 100;
+    const isScrolledDown = scrollY > 100;
+
+    if (isMouseAtTop || isScrolledDown) {
+      menu.style.height = '100px';
+      menu.style.visibility = 'visible';
+    } else {
+      menu.style.height = '0';
+      menu.style.visibility = 'hidden';
+    }
+}
 }
