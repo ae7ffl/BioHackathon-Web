@@ -11,11 +11,11 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   isDiscoverVisible: WritableSignal<boolean> = signal(true);
 
-  private animationFinished = false
+  private animationFinished = false;
 
   currentYear: number = new Date().getFullYear();
 
-  private onScroll = () => {
+  public onScroll = () => {
     console.log('Scroll detected'); 
     const menu = document.getElementById('menu') as HTMLElement | null;
     if (menu) {
@@ -80,19 +80,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     const menu = document.getElementById('menu') as HTMLElement | null;
     if (!menu) return;
 
-    // No mostrar la Navbar si la animación no ha terminado
     if (!this.animationFinished) {
       menu.style.height = '0';
       menu.style.visibility = 'hidden';
       return;
     }
 
-    // Mostrar la Navbar si:
-    // 1. El ratón está en los primeros 100 píxeles, o
-    // 2. El scroll es mayor a 100 píxeles
     const isMouseAtTop = clientY !== undefined && clientY <= 100;
- 
-
     if (isMouseAtTop) {
       menu.style.height = '100px';
       menu.style.visibility = 'visible';
@@ -100,5 +94,5 @@ export class HomeComponent implements OnInit, OnDestroy {
       menu.style.height = '0';
       menu.style.visibility = 'hidden';
     }
-}
+  }
 }

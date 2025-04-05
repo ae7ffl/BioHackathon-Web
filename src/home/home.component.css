@@ -54,6 +54,23 @@ nav {
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s ease-in-out;
+    /* Transición de opacidad y blur para los elementos dentro de la Navbar */
+    nav .list a,
+    nav .logo img,
+    nav .icon-bars {
+        transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out; /* Transición para opacidad y blur */
+        opacity: 1; /* Opacidad por defecto */
+        filter: blur(0); /* Sin blur por defecto */
+    }
+
+    /* Cuando la Navbar está oculta (visibility: hidden), aplicar blur y reducir opacidad */
+    nav[style*="visibility: hidden"] .list a,
+    nav[style*="visibility: hidden"] .logo img,
+    nav[style*="visibility: hidden"] .icon-bars {
+        opacity: 0; /* Reducir opacidad */
+        filter: blur(5px); /* Aplicar blur */
+    }
+
 
     .logo {
         img {
