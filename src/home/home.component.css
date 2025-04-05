@@ -317,7 +317,7 @@ nav {
 
         h3 {
             font-family: 'Oswald', sans-serif;
-            font-size: 3.5rem;
+            font-size: clamp(2rem, 5vw, 3.5rem); /* Escala entre 2rem y 3.5rem según el ancho de la pantalla */
             margin-bottom: 2%;
             color: var(--primary-color);
         }
@@ -325,21 +325,23 @@ nav {
 
     .team-section-members {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
-        gap: 2%;
+        grid-template-columns: repeat(5, 1fr); /* 5 columnas fijas */
+        gap: 2%; /* Espaciado */
         padding: 0 1%;
+        max-width: 90vw; 
+        margin: 0 auto; 
 
         .team-member {
             background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 1vw; 
+            box-shadow: 0 0.4vw 1vw rgba(0,0,0,0.1); 
             padding: 3%;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
 
             &:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+                transform: translateY(-1vw); 
+                box-shadow: 0 0.8vw 1.6vw rgba(0,0,0,0.15);
                 .team-member-description p, .team-member-title h5  {
                     color: var(--primary-color);
                     transition: ease-in-out 0.3s;
@@ -348,24 +350,24 @@ nav {
 
             .team-member-photo img {
                 width: 100%;
-                max-width: 360px; /* limita el ancho */
+                max-width: 18vw; /* Ajustado para 5 columnas (menor ancho por miembro) */
                 height: auto; 
                 object-fit: cover;
                 border: solid var(--light-color);
                 border-radius: 10%;
-                margin-bottom: 10%;
+                margin-bottom: 5%; /* Margen relativo */
             }
 
             .team-member-title {
                 h4{
-                    font-size: 1.5rem;
+                    font-size: clamp(0.9rem, 2vw, 1.5rem);
                     font-weight: 600;
                     color: var(--primary-color);
                     margin-bottom: 2%;
                 }
 
                 h5{
-                    font-size: 1rem;
+                    font-size: clamp(0.7rem, 1.5vw, 1rem);;
                     font-weight: 600;
                     color: var(--primary-color);
                     margin-bottom: 2%;
@@ -383,6 +385,8 @@ nav {
                 padding: 3%;
                 
             }
+
+
         }
     }
 }
