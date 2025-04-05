@@ -13,25 +13,25 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       photo: './assets/img/Foto_Nina-Souto-Blanco.jpg',
       name: 'Nina Souto Blanco',
-      title: 'Co-founder',
+      title: 'BioFounder',
       description: `Biochemistry student at Universidad de Málaga. Passioned for biomedicine and the study of human diseases, I focus my formation in the use of bioinformatic tools to impulse research, optimize clinical diagnosis and contribute to improve the health and quality of life of people.`,
     },
     {
       photo: './assets/img/Foto_Miguel-Leonardo-Padilla-Romo.jpeg',
       name: 'Miguel Padilla',
-      title: 'Co-founder',
+      title: 'BioFounder',
       description: `Health Engineering student at Universidad de Málaga, specialized in bioinformatics and interested in web development. I began my career developing a customized genomic data exploration tool to support researchers in their work. I am passionate about helping scientists achieve meaningful breakthroughs.`,
     },
     {
       photo: './assets/img/Foto_Juan-Antonio-de-la-Cruz-Bellido.jpeg',
       name: 'Juan Antonio de la Cruz Bellido',
-      title: 'Founder & CEO',
+      title: 'BioFounder & CEO',
       description: `Biology student at Universidad de Málaga, with great interest for and some experience in synthetic biology, bioinformatics (within the genomic and protein engineering fields) as well as bioentrepreneurship, focused on team leadership and achieving advancements on the research world.`,
     },
     {
       photo: './assets/img/Foto_Sofia-Zafirova.jpg',
       name: 'Sofía Zafirova',
-      title: 'Co-founder',
+      title: 'BioFounder',
       description: `Biology student at universidad de Málaga, passioned about the field of diagnosis and research of the human body. My main interest is focused on making known and explaining the fundamental use of modern-day bioinformatics in facilitating the work of people belonging to the scientific sector.`,
     },
     {
@@ -55,19 +55,19 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       photo: './assets/img/default_user.png',
       name: 'Miembro 8',
-      title: 'Co-founder',
+      title: 'BioFounder',
       description: `Biology student at universidad de Málaga, passioned about the field of diagnosis and research of the human body. My main interest is focused on making known and explaining the fundamental use of modern-day bioinformatics in facilitating the work of people belonging to the scientific sector.`,
     },
     {
       photo: './assets/img/default_user.png',
       name: 'Miembro 9',
-      title: 'Co-founder',
+      title: 'BioFounder',
       description: `Biology student at universidad de Málaga, passioned about the field of diagnosis and research of the human body. My main interest is focused on making known and explaining the fundamental use of modern-day bioinformatics in facilitating the work of people belonging to the scientific sector.`,
     },
     {
       photo: './assets/img/default_user.png',
       name: 'Miembro 10',
-      title: 'Co-founder',
+      title: 'BioFounder',
       description: `Biology student at universidad de Málaga, passioned about the field of diagnosis and research of the human body. My main interest is focused on making known and explaining the fundamental use of modern-day bioinformatics in facilitating the work of people belonging to the scientific sector.`,
     }
   ];
