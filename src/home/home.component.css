@@ -49,7 +49,8 @@ nav {
     top: 0; left: 0; right: 0;
     padding: 0 5%;
     max-height: 100px;
-    background-color: #f9f9f9;
+    background-color: rgba(249, 249, 249, 0.8);
+    backdrop-filter: blur(10px); 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,11 +75,9 @@ nav {
 
     .logo {
         img {
-            max-width: 300px;
+            margin-top: 15px;
+            max-width: 250px;
         }
-    }
-    .logo img{
-        width: 250px;
     }
 
     .list {
@@ -352,6 +351,7 @@ nav {
                 width: 100%;
                 max-width: 18vw; /* Ajustado para 5 columnas (menor ancho por miembro) */
                 height: auto; 
+                max-height: 400px; 
                 object-fit: cover;
                 border: solid var(--light-color);
                 border-radius: 10%;
