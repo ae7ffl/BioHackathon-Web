@@ -10,9 +10,9 @@ import { Component, OnInit, OnDestroy, HostListener, signal, WritableSignal } fr
 export class HomeComponent implements OnInit, OnDestroy {
 
   isDiscoverVisible: WritableSignal<boolean> = signal(true);
-  /* */
+
   private animationFinished = false
-  /* */
+
   currentYear: number = new Date().getFullYear();
 
   private onScroll = () => {
@@ -45,8 +45,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     setTimeout(() => {
     this.animationFinished = true;
     console.log('Animation finished');
-    this.updateNavbarVisibility(); // Evaluar la visibilidad de la Navbar después de la animación
-    }, 1000); // Ajusta este tiempo según la duración de tu animación (1s en el CSS)  
+    this.updateNavbarVisibility(); // después de la animación
+    }, 500); // Ajusta este tiempo según la duración de tu animación (1s en el CSS)  
 
     window.addEventListener('scroll', this.onScroll);
     window.addEventListener('scroll', this.toggleDiscoverSection);
@@ -75,7 +75,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }
 
-  // Combinar ratón y scroll
+  // Nueva función para combinar las condiciones de ratón y scroll
   private updateNavbarVisibility(clientY?: number, scrollY: number = window.scrollY): void {
     const menu = document.getElementById('menu') as HTMLElement | null;
     if (!menu) return;
@@ -91,9 +91,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     // 1. El ratón está en los primeros 100 píxeles, o
     // 2. El scroll es mayor a 100 píxeles
     const isMouseAtTop = clientY !== undefined && clientY <= 100;
-    const isScrolledDown = scrollY > 100;
+ 
 
-    if (isMouseAtTop || isScrolledDown) {
+    if (isMouseAtTop) {
       menu.style.height = '100px';
       menu.style.visibility = 'visible';
     } else {
