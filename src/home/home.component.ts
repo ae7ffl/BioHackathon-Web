@@ -15,61 +15,81 @@ export class HomeComponent implements OnInit, OnDestroy {
       name: 'Nina Souto Blanco',
       title: 'BioFounder',
       description: `Biochemistry student at Universidad de Málaga. Passioned for biomedicine and the study of human diseases, I focus my formation in the use of bioinformatic tools to impulse research, optimize clinical diagnosis and contribute to improve the health and quality of life of people.`,
+      mail:'',
+      linkedin: 'https://www.linkedin.com/in/nina-souto-blanco-524893282/'
     },
     {
       photo: './assets/img/Foto_Miguel-Leonardo-Padilla-Romo.jpeg',
       name: 'Miguel Padilla',
       title: 'BioFounder',
       description: `Health Engineering student at Universidad de Málaga, specialized in bioinformatics and interested in web development. I began my career developing a customized genomic data exploration tool to support researchers in their work. I am passionate about helping scientists achieve meaningful breakthroughs.`,
+      mail:'m.padi.r@icloud.com',
+      linkedin: 'https://www.linkedin.com/in/miguel-l-padilla-romo'
     },
     {
       photo: './assets/img/Foto_Juan-Antonio-de-la-Cruz-Bellido.jpeg',
       name: 'Juan Antonio de la Cruz Bellido',
       title: 'BioFounder & CEO',
       description: `Biology student at Universidad de Málaga, with great interest for and some experience in synthetic biology, bioinformatics (within the genomic and protein engineering fields) as well as bioentrepreneurship, focused on team leadership and achieving advancements on the research world.`,
+      mail:'',
+      linkedin: 'http://www.linkedin.com/in/juan-antonio-de-la-cruz-bellido-8900ba247'
     },
     {
       photo: './assets/img/Foto_Sofia-Zafirova.jpg',
       name: 'Sofía Zafirova',
       title: 'BioFounder',
-      description: `Biology student at universidad de Málaga, passioned about the field of diagnosis and research of the human body. My main interest is focused on making known and explaining the fundamental use of modern-day bioinformatics in facilitating the work of people belonging to the scientific sector.`,
+      description: `Biology student at Universidad de Málaga, passioned about the field of diagnosis and research of the human body. My main interest is focused on making known and explaining the fundamental use of modern-day bioinformatics in facilitating the work of people belonging to the scientific sector.`,
+      mail:'',
+      linkedin: 'https://www.linkedin.com/in/sof%C3%ADa-zafirova-vasileva-kadankova-983759359?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
     },
     {
       photo: './assets/img/default_user.png',
       name: 'Juan Diego López',
       title: 'BioFounder',
-      description: `Biochemistry student at University de Málaga. I feel a special inclination towards bioinformatics, specially focused on analyzing biological data of any kind, and applied to automated classification systems and virtual data analysis. All centered around impulsing biology research, biochemstry and biotechnology.`,
+      description: `Biochemistry student at Universidad de Málaga. I feel a special inclination towards bioinformatics, specially focused on analyzing biological data of any kind, and applied to automated classification systems and virtual data analysis. All centered around impulsing biology research, biochemstry and biotechnology.`,
+      mail:'',
+      linkedin: 'http://www.linkedin.com/in/juandiego-l%C3%B3pez-934035345'
     },
     {
       photo: './assets/img/default_user.png',
       name: 'Isabel Fernández',
       title: 'BioFounder',
-      description: `Biology student at Univerdad de Málaga. I am passionateabout genomic and protein analuysis to deepen our understanding of dieeases and develop new biomedical tools. I would like to apply biological data processing to improve all health-related research.`,
+      description: `Biology student at Universidad de Málaga. I am passionateabout genomic and protein analuysis to deepen our understanding of dieeases and develop new biomedical tools. I would like to apply biological data processing to improve all health-related research.`,
+      mail:'',
+      linkedin: 'https://www.linkedin.com/in/isabel-fernandez-51b350359?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
     },
     {
       photo: './assets/img/Foto-Maria_Bonafonte.jpeg',
       name: 'María Bonafante',
       title: 'BioFounder',
-      description: `Health Engineering student at the University of Málaga. I love programming and its application in the healthcare field, with a special interest in optimizing processes to improve medical care. I enjoy collaborating on innovative projects, convinced that teamwork is key to contributing to people’s well-being and health.`,
+      description: `Health Engineering student at the Universidad of Málaga. I love programming and its application in the healthcare field, with a special interest in optimizing processes to improve medical care. I enjoy collaborating on innovative projects, convinced that teamwork is key to contributing to people’s well-being and health.`,
+      mail:'',
+      linkedin: 'http://www.linkedin.com/in/mar%C3%ADa-bonafonte-s%C3%A1nchez-3a5b72358'
+    },
+    {
+      photo: './assets/img/Foto_Lucía-Fernandez.jpeg',
+      name: 'Lucía Fernández',
+      title: 'BioFounder',
+      description: ``,
+      mail:'',
+      linkedin: 'http://www.linkedin.com/in/luc%C3%ADa-fern%C3%A1ndez-fern%C3%A1ndez-6702a4257'
     },
     {
       photo: './assets/img/default_user.png',
-      name: 'Miembro 8',
+      name: 'Fernando Ruz Castaño',
       title: 'BioFounder',
-      description: `Biology student at universidad de Málaga, passioned about the field of diagnosis and research of the human body. My main interest is focused on making known and explaining the fundamental use of modern-day bioinformatics in facilitating the work of people belonging to the scientific sector.`,
+      description: ``,
+      mail:'',
+      linkedin: 'https://www.linkedin.com/in/fernando-ruz-casta%C3%B1o-360b69356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
     },
     {
-      photo: './assets/img/default_user.png',
-      name: 'Miembro 9',
+      photo: './assets/img/Foto_Eulogio-Vargas.jpeg',
+      name: 'Eulogio Vargas',
       title: 'BioFounder',
-      description: `Biology student at universidad de Málaga, passioned about the field of diagnosis and research of the human body. My main interest is focused on making known and explaining the fundamental use of modern-day bioinformatics in facilitating the work of people belonging to the scientific sector.`,
+      description: ``,
+      mail:'',
+      linkedin: 'https://www.linkedin.com/in/eulogio-vargas-7b953a339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
     },
-    {
-      photo: './assets/img/default_user.png',
-      name: 'Miembro 10',
-      title: 'BioFounder',
-      description: `Biology student at universidad de Málaga, passioned about the field of diagnosis and research of the human body. My main interest is focused on making known and explaining the fundamental use of modern-day bioinformatics in facilitating the work of people belonging to the scientific sector.`,
-    }
   ];
   /**
    * Is discover section visible flag
@@ -95,7 +115,7 @@ export class HomeComponent implements OnInit, OnDestroy {
           document.body.style.pointerEvents = 'auto';
           document.body.style.overflow = '';
         }, 1100);
-      } else if (window.scrollY <= 100 && discoverSection.style.height !== 'auto') {
+      } else if (window.scrollY <= 100 && discoverSection.style.height === '0px') {
         this.isDiscoverVisible.set(true);
         discoverSection.style.height = '100vh';
         discoverSection.style.transform = '';

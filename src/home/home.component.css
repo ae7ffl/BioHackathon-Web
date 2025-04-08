@@ -351,7 +351,6 @@ nav {
     
 
 #team {
-    min-height: 100vh;
     padding: 5% 2%;
     margin-bottom: 5%;
 
@@ -379,7 +378,8 @@ nav {
             background: #fff;
             border-radius: 1vw; 
             box-shadow: 0 0.4vw 1vw rgba(0,0,0,0.1); 
-            padding: 3%;
+            padding: 10px;
+            margin: 15px 0;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -394,13 +394,15 @@ nav {
 
             .team-member-photo img {
                 width: 100%;
-                max-width: 18vw; /* Ajustado para 5 columnas (menor ancho por miembro) */
-                height: auto; 
-                max-height: 400px; 
+                max-width: auto;
+                --height-len: 340px;
+                height: var(--height-len); 
+                max-height: var(--height-len); 
                 object-fit: cover;
                 border: solid var(--light-color);
-                border-radius: 10%;
+                border-radius: 1000%;
                 margin-bottom: 5%; /* Margen relativo */
+                object-position: center 30%; /* 👈 Pushes visible area of image downward */
             }
 
             .team-member-title {
@@ -430,7 +432,18 @@ nav {
                 padding: 10px;
             }
 
+            .team-member-icons {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 20px;
+                img {
+                    height: 50px;
+                    width: auto;
+                }
 
+            }
         }
     }
 }
