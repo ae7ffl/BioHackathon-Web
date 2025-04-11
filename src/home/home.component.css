@@ -384,6 +384,7 @@ nav {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
 
             &:hover {
+                cursor: pointer;
                 transform: translateY(-1vw); 
                 box-shadow: 0 0.8vw 1.6vw rgba(0,0,0,0.15);
                 .team-member-description p, .team-member-title h5  {

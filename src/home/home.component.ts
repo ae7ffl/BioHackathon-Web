@@ -1,15 +1,19 @@
 import { Component, OnInit, OnDestroy, HostListener, signal, WritableSignal } from '@angular/core';
+import { ITeamMember } from '../models/models';
+import { DetailsPanelComponent } from "../details-panel/details-panel.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [DetailsPanelComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit, OnDestroy {
-
-  public teamMembers = [
+  /**
+   * Team members information
+   */
+  public teamMembers: ITeamMember[] = [
     {
       photo: './assets/img/Foto_Nina-Souto-Blanco.jpg',
       name: 'Nina Souto Blanco',
@@ -91,10 +95,17 @@ export class HomeComponent implements OnInit, OnDestroy {
       linkedin: 'https://www.linkedin.com/in/eulogio-vargas-7b953a339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
     },
   ];
+  public selectedMember: ITeamMember = this.teamMembers[0];
+  private lastScrollY = window.scrollY;
+
   /**
    * Is discover section visible flag
    */
-  isDiscoverVisible: WritableSignal<boolean> = signal(true);
+  public isDiscoverVisible: WritableSignal<boolean> = signal(true);
+  /**
+   * Is Details Panel open flag
+   */
+  public isDetailsPanelOpen: WritableSignal<boolean> = signal(false);
   /**
    * Current year for footer
    */
@@ -105,6 +116,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   private toggleDiscoverSection = () => {
     const discoverSection = document.getElementById('discover') as HTMLElement | null;
     if (discoverSection) {
+      console.log("window.scrollY", window.scrollBy())
       if (window.scrollY > 100 && discoverSection.style.height !== '0px') {
         this.isDiscoverVisible.set(true);
         discoverSection.style.height = '0px';
@@ -139,9 +151,14 @@ export class HomeComponent implements OnInit, OnDestroy {
    */
   private toggleNavbarVisibility(event: MouseEvent): void {
     const navBar = document.getElementById('navbar');
-    const discoverSection = document.getElementById('discover') as HTMLElement | null;
+    const currentScrollY = window.scrollY;
+    const isScrollingUp = currentScrollY < this.lastScrollY;
     if (navBar) {
-      if (event.clientY <= 100 && discoverSection?.style.height === '0px') {
+      const nearTop = event.clientY <= 100;
+      const hasScrolled = currentScrollY > 0;
+      console.log("isScrollingUp",isScrollingUp)
+  
+      if ((nearTop && this.isDiscoverVisible()) || isScrollingUp || hasScrolled) {
         navBar.style.height = '100px';
         navBar.style.visibility = 'visible';
       } else {
@@ -149,5 +166,16 @@ export class HomeComponent implements OnInit, OnDestroy {
         navBar.style.visibility = 'hidden';
       }
     }
+    this.lastScrollY = currentScrollY;
   }
-}
+  openDetailsPanel(member: ITeamMember) {
+    this.selectedMember = member;
+    document.body.style.overflow = 'hidden'; // prevent scrolling
+    this.isDetailsPanelOpen.set(true);
+  }
+  
+  closeDetailsPanel() {
+    this.isDetailsPanelOpen.set(false);
+    document.body.style.overflow = ''; // re-enable scrolling
+  }
+  }

@@ -65,8 +65,8 @@
           <h3>Meet the team</h3>
           <div class="team-section-members">
             @for (member of teamMembers; track $index) {
-                <div class="team-member">
-                  <div class="team-member-photo">
+                <div class="team-member" (click)="openDetailsPanel(member)">
+                    <div class="team-member-photo">
                       <img [src]="member.photo" [alt]="member.name">
                   </div>
                   <div class="team-member-title">
@@ -77,13 +77,18 @@
                         <a href="mailto:{{ member.mail }}" target="_blank">
                             <img src="./assets/icon/mail-icon.png" alt="Send email">
                         </a>
-                        <a href="{{ member.linkedin }}" target="_blank">
+                        <a [href]="member.linkedin" target="_blank">
                             <img src="./assets/icon/linkedin-gray.png" alt="">
                         </a>
                   </div>
-                </div>
+             </div>
             }
-          </div>
+            <app-details-panel
+            [teamMember]="selectedMember"
+            [isOpen]="isDetailsPanelOpen()"
+            (close)="closeDetailsPanel()"
+          ></app-details-panel>          
+        </div>
         </div>
       </div>
           <div id="contact" class="contact-section">

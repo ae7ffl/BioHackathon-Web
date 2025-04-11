@@ -1,0 +1,22 @@
+@if (isOpen) {
+    <div 
+      class="details-overlay" 
+      (click)="onOverlayClick($event)"
+    >
+      <div class="details-panel-container">
+        <div class="details-panel-photo">
+          <img [src]="teamMember.photo" [alt]="teamMember.name" />
+        </div>
+        <div class="details-panel-details">
+          <div class="details-panel-title">
+            <h4>{{ teamMember.name }}</h4>
+            <h5>{{ teamMember.title }}</h5>
+          </div>
+          <div class="details-panel-description">
+            <p>{{ teamMember.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+  
