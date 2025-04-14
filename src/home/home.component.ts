@@ -19,14 +19,14 @@ export class HomeComponent implements OnInit, OnDestroy {
       name: 'Nina Souto Blanco',
       title: 'BioFounder',
       description: `Biochemistry student at Universidad de Málaga. Passioned for biomedicine and the study of human diseases, I focus my formation in the use of bioinformatic tools to impulse research, optimize clinical diagnosis and contribute to improve the health and quality of life of people.`,
-      mail:'',
+      mail:'nina.soutoblanco@gmail.com',
       linkedin: 'https://www.linkedin.com/in/nina-souto-blanco-524893282/'
     },
     {
       photo: './assets/img/Foto_Miguel-Leonardo-Padilla-Romo.jpeg',
       name: 'Miguel Padilla',
       title: 'BioFounder',
-      description: `Health Engineering student at Universidad de Málaga, specialized in bioinformatics and interested in web development. I began my career developing a customized genomic data exploration tool to support researchers in their work. I am passionate about helping scientists achieve meaningful breakthroughs.`,
+      description: `Health Engineering student at Universidad de Málaga, specialized in bioinformatics with interests in software development and ML/AI. I began my professional career developing a customized genomic data exploration tool to support researchers in their work. I am keen on helping scientists achieve meaningful breakthroughs.`,
       mail:'m.padi.r@icloud.com',
       linkedin: 'https://www.linkedin.com/in/miguel-l-padilla-romo'
     },
@@ -34,8 +34,8 @@ export class HomeComponent implements OnInit, OnDestroy {
       photo: './assets/img/Foto_Juan-Antonio-de-la-Cruz-Bellido.jpeg',
       name: 'Juan Antonio de la Cruz Bellido',
       title: 'BioFounder & CEO',
-      description: `Biology student at Universidad de Málaga, with great interest for and some experience in synthetic biology, bioinformatics (within the genomic and protein engineering fields) as well as bioentrepreneurship, focused on team leadership and achieving advancements on the research world.`,
-      mail:'',
+      description: `Biology student at Universidad de Málaga, with great interest for and some experience in synthetic biology, bioinformatics (within the genomic and protein engineering fields) as well as bio-entrepreneurship, focused on team leadership and achieving advancements on the research world.`,
+      mail:'juanantoniodelacruzbellido@gmail.com',
       linkedin: 'http://www.linkedin.com/in/juan-antonio-de-la-cruz-bellido-8900ba247'
     },
     {
@@ -43,23 +43,23 @@ export class HomeComponent implements OnInit, OnDestroy {
       name: 'Sofía Zafirova',
       title: 'BioFounder',
       description: `Biology student at Universidad de Málaga, passioned about the field of diagnosis and research of the human body. My main interest is focused on making known and explaining the fundamental use of modern-day bioinformatics in facilitating the work of people belonging to the scientific sector.`,
-      mail:'',
+      mail:'sofiazafirovavasileva06@gmail.com',
       linkedin: 'https://www.linkedin.com/in/sof%C3%ADa-zafirova-vasileva-kadankova-983759359?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
     },
     {
-      photo: './assets/img/default_user.png',
-      name: 'Juan Diego López',
+      photo: './assets/img/Foto_Juandiego-Lopez.jpg',
+      name: 'Juandiego López',
       title: 'BioFounder',
       description: `Biochemistry student at Universidad de Málaga. I feel a special inclination towards bioinformatics, specially focused on analyzing biological data of any kind, and applied to automated classification systems and virtual data analysis. All centered around impulsing biology research, biochemstry and biotechnology.`,
-      mail:'',
+      mail:'42jdlg@gmail.com',
       linkedin: 'http://www.linkedin.com/in/juandiego-l%C3%B3pez-934035345'
     },
     {
-      photo: './assets/img/default_user.png',
+      photo: './assets/img/Foto-Isabel_Fernandez.JPG',
       name: 'Isabel Fernández',
       title: 'BioFounder',
-      description: `Biology student at Universidad de Málaga. I am passionateabout genomic and protein analuysis to deepen our understanding of dieeases and develop new biomedical tools. I would like to apply biological data processing to improve all health-related research.`,
-      mail:'',
+      description: `Biology student at Universidad de Málaga. I am passionate about genomic and protein analuysis to deepen our understanding of dieeases and develop new biomedical tools. I would like to apply biological data processing to improve all health-related research.`,
+      mail:'isabelita171204@gmail.com',
       linkedin: 'https://www.linkedin.com/in/isabel-fernandez-51b350359?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
     },
     {
@@ -67,37 +67,38 @@ export class HomeComponent implements OnInit, OnDestroy {
       name: 'María Bonafante',
       title: 'BioFounder',
       description: `Health Engineering student at the Universidad of Málaga. I love programming and its application in the healthcare field, with a special interest in optimizing processes to improve medical care. I enjoy collaborating on innovative projects, convinced that teamwork is key to contributing to people’s well-being and health.`,
-      mail:'',
+      mail:'maria.bonafonte@me.com',
       linkedin: 'http://www.linkedin.com/in/mar%C3%ADa-bonafonte-s%C3%A1nchez-3a5b72358'
     },
     {
       photo: './assets/img/Foto_Lucía-Fernandez.jpeg',
       name: 'Lucía Fernández',
       title: 'BioFounder',
-      description: ``,
-      mail:'',
+      description: `Health Engineering student with specialization in Biomedical Engineering at Universidad de Malaga. I combine my passion for technology and health to create innovative solutions. A tennis lover since childhood and an inveterate reader, I firmly believe in facing challenges with determination and a smile`,
+      mail:'lucia@kai-zen.es',
       linkedin: 'http://www.linkedin.com/in/luc%C3%ADa-fern%C3%A1ndez-fern%C3%A1ndez-6702a4257'
     },
     {
-      photo: './assets/img/default_user.png',
+      photo: './assets/img/Foto-Fernando_Ruz.jpeg',
       name: 'Fernando Ruz Castaño',
       title: 'BioFounder',
-      description: ``,
-      mail:'',
+      description: `Biochemistry student at Universidad de Málaga. I love the biochemistry field dedicated to research and focused on human diseases and vaguard therapies. I like to apply my bioinformatic knowledge and software development in these areas as well as any other I can contribut for research and overall progress.`,
+      mail:'fernandorc4747@gmail.com',
       linkedin: 'https://www.linkedin.com/in/fernando-ruz-casta%C3%B1o-360b69356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
     },
     {
       photo: './assets/img/Foto_Eulogio-Vargas.jpeg',
       name: 'Eulogio Vargas',
       title: 'BioFounder',
-      description: ``,
-      mail:'',
+      description: `Chemistry student at Universidad de Málaga. Enthusiast of the research world and scientific advancement, both in theory and experimental breathroughs as well as with the develoment of new techologies. Currently learning programming and undergoing an internship at the CSIC (IEO) research center.`,
+      mail:'eu02vargas@gmail.com',
       linkedin: 'https://www.linkedin.com/in/eulogio-vargas-7b953a339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
     },
   ];
+  /**
+   * Clicked team member info
+   */
   public selectedMember: ITeamMember = this.teamMembers[0];
-  private lastScrollY = window.scrollY;
-
   /**
    * Is discover section visible flag
    */
@@ -116,7 +117,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   private toggleDiscoverSection = () => {
     const discoverSection = document.getElementById('discover') as HTMLElement | null;
     if (discoverSection) {
-      console.log("window.scrollY", window.scrollBy())
       if (window.scrollY > 100 && discoverSection.style.height !== '0px') {
         this.isDiscoverVisible.set(true);
         discoverSection.style.height = '0px';
@@ -151,14 +151,11 @@ export class HomeComponent implements OnInit, OnDestroy {
    */
   private toggleNavbarVisibility(event: MouseEvent): void {
     const navBar = document.getElementById('navbar');
-    const currentScrollY = window.scrollY;
-    const isScrollingUp = currentScrollY < this.lastScrollY;
     if (navBar) {
       const nearTop = event.clientY <= 100;
-      const hasScrolled = currentScrollY > 0;
-      console.log("isScrollingUp",isScrollingUp)
-  
-      if ((nearTop && this.isDiscoverVisible()) || isScrollingUp || hasScrolled) {
+      const discoverSection = document.getElementById('discover') as HTMLElement | null;
+
+      if (nearTop && discoverSection?.style.height === '0px') {
         navBar.style.height = '100px';
         navBar.style.visibility = 'visible';
       } else {
@@ -166,7 +163,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         navBar.style.visibility = 'hidden';
       }
     }
-    this.lastScrollY = currentScrollY;
   }
   openDetailsPanel(member: ITeamMember) {
     this.selectedMember = member;
